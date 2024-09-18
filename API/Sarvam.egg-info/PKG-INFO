@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: Sarvam
+Version: 0.0.1
+Author: Sagar
+Author-email: sagarbag25@gmail.com
+Requires-Dist: groq
+Requires-Dist: langchain
+Requires-Dist: streamlit
+Requires-Dist: python-dotenv
+Requires-Dist: PyPDF2

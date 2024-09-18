@@ -1,0 +1,12 @@
+setup.py
+Sarvam.egg-info/PKG-INFO
+Sarvam.egg-info/SOURCES.txt
+Sarvam.egg-info/dependency_links.txt
+Sarvam.egg-info/requires.txt
+Sarvam.egg-info/top_level.txt
+mcqgenerator/MCQGenerator.py
+mcqgenerator/__init__.py
+mcqgenerator/utils.py
+src/__init__.py
+src/prompt.py
+src/utils.py
