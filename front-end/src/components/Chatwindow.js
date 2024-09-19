@@ -101,12 +101,13 @@ const ChatWindow = () => {
   return (
     <div className="chat-container">
       <Card
-        title={<div style={{ color: "white" }}>RAG Bot</div>}
+        title={<div style={{ color: "white" }}>Bot</div>}
         bordered={false}
-        style={{ width: 500, backgroundColor: '#002147', color: '#fff' }} // Dark blue background
+        className='chat-box'
+        style={{ width: 500, color: '#fff' }} // Dark blue background
       >
         <div className="toggle-container">
-          <span style={{ color: '#fff', marginRight: '10px' }}>
+          <span style={{ color: '#fff', marginRight: '10px', fontWeight:'bold' }}>
             {isRagMode ? 'RAG Mode' : 'Agent Mode'}
           </span>
           <Switch
@@ -115,8 +116,8 @@ const ChatWindow = () => {
             checked={isRagMode}
             onChange={handleToggle}
             style={{
-              backgroundColor: isRagMode ? '#1D4ED8' : '#F59E0B',  // Change color based on mode
-              borderColor: isRagMode ? '#1D4ED8' : '#F59E0B',
+              backgroundColor: isRagMode ? '#6b08c7' : '#F59E0B',  // Change color based on mode
+              borderColor: isRagMode ? '#6b08c7' : '#F59E0B',
             }}
           />
         </div>
@@ -137,7 +138,7 @@ const ChatWindow = () => {
                 <List.Item.Meta
                   avatar={
                     msg.sender === 'user' ? (
-                      <Avatar icon={<UserOutlined />} style={{ backgroundColor: '#1D4ED8', color: '#fff' }} />
+                      <Avatar icon={<UserOutlined />} style={{ backgroundColor: '#860ff6', color: '#fff' }} />
                       ) : (
                         <Avatar icon={<RobotOutlined />} style={{ backgroundColor: '#F59E0B', color: '#fff' }} />
                       )
@@ -146,7 +147,7 @@ const ChatWindow = () => {
                   description={<div style={{ color: "white" }}>{msg.text}<div ref={messagesEndRef}/></div>}
                   style={{
                     color: '#fff',
-                    backgroundColor: msg.sender === 'user' ? '#1D4ED8' : '#374151',
+                    backgroundColor: msg.sender === 'user' ? '#860ff6' : '#374151',
                     borderRadius: '10px',
                     padding: '10px',
                     marginBottom: '5px',
@@ -184,7 +185,7 @@ const ChatWindow = () => {
           icon={<SendOutlined />}
           onClick={handleSubmit}
           disabled={isLoading}
-          style={{ width: '100%', backgroundColor: '#1D4ED8', borderColor: '#1D4ED8' }}
+          style={{ width: '100%', backgroundColor: '#6b08c7', borderColor: '#1D4ED8' }}
         >
           Send
         </Button>

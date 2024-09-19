@@ -4,8 +4,12 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #07646b; /* Dark blue background */
+  /* background-color: #07646b; Dark blue background */
   color: #fff; /* Set all text to white */
+  background-image: url('./purple-and-black-aesthetic-led-kaleidoscope-bzh7fedalo57vr1p.jpg'); /* Path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Message list styling - scrollable */
@@ -13,12 +17,20 @@
   max-height: 400px; /* Adjust height to your preference */
   overflow-y: auto; /* Enable vertical scrolling */
   padding: 10px;
-  background-color: #001f3f; /* Dark blue background */
   border-radius: 10px;
   color: #fff; /* Set message text to white */
-  scrollbar-color: #1890ff #002147; /* Scrollbar color for better visibility */
+  scrollbar-color: #6b08c7 #210041; /* Scrollbar color for better visibility */
   scrollbar-width: thin;
+  background-color: black;
+  
 }
+.chat-box{
+  background-image: url('./chat\ bg.jpg'); /* Path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 
 /* Individual messages */
 .message-item {
@@ -27,8 +39,6 @@
 
 /* User message styling */
 .user-message .ant-list-item-meta {
-  background-color: #1890ff; /* Lighter blue for user messages */
-  color: #fff; /* White text */
   text-align: right;
   border-radius: 15px;
   padding: 8px;
@@ -38,8 +48,6 @@
 
 /* Bot message styling */
 .bot-message .ant-list-item-meta {
-  background-color: #004080; /* Darker blue for bot messages */
-  color: #fff; /* White text */
   text-align: left;
   border-radius: 15px;
   padding: 8px;
@@ -52,7 +60,7 @@
   color: #fff; /* White text */
 }
 
-/* Text area styling */
+
 .ant-input {
   color: #fff; /* White text in input field */
   background-color: #001f3f; /* Dark background for input */
@@ -76,10 +84,7 @@
   width: 8px;
 }
 
-.message-list::-webkit-scrollbar-thumb {
-  background-color: #1890ff; /* Scrollbar thumb */
-  border-radius: 10px;
-}
+
 
 .message-list::-webkit-scrollbar-track {
   background-color: #001f3f; /* Scrollbar track */
