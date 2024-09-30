@@ -5,6 +5,7 @@ from langchain.chains import LLMChain
 from langchain.agents import initialize_agent,AgentType
 from RAG import send_query
 from mcqgenerator.MCQGenerator import question ,generate_quiz
+from langchain.memory import ConversationBufferMemory
 from Translate_AGENT import Translate_agent
 
 from dotenv import load_dotenv
@@ -120,19 +121,14 @@ Translator_tool=Tool.from_function(
     description=" return dictionary as translated language name: translated text  FOR ANY TRANSLATION TASK ALWAYS USE THISSS provide the language to be translated to and  "
 )
 
-
-
-
 def agent(query):
     def relevece(information):
         relavence_checker.run({"information":information,"question":query})
-
-   
-    
-   
+    memory = ConversationBufferMemory(memory_key="chat_history")    
     agent_1 = initialize_agent(
     tools=[greeting_tool,Translator_tool,quiz_from_rag_tool,genral_llm_tool,Rag_tool],
-    agent_type=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+    agent=AgentType.CONVERSATIONAL_REACT_DESCRIPTION,  # Conversational agent
+    memory=memory,
     llm=llm2,
     verbose=True
     )

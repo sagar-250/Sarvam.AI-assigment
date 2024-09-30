@@ -31,7 +31,7 @@ llm = ChatGroq(
 
 embeddings = download_hugging_face_embedings()
 
-index_name = "rag"
+index_name = "sarvamrag"
 
 docsearch=Pinecone.from_existing_index(index_name, embeddings)
 
