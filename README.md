@@ -26,6 +26,7 @@ The frontend is built using **React** and integrates the browser's **Text-to-Voi
 ### Key Features
 - React-based UI for user interaction
 - Text-to-Voice conversion using the browser's built-in capabilities to handle English language processing
+- Smart API calling from agent to use Sarvam translate APi to translate text to any indiam language 
 
 ### How to Run the Frontend
 1. Navigate to the `frontend` folder.
